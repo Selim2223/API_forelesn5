@@ -43,6 +43,12 @@
         hogwartsStaff.forEach((staffMember, index) => {
           const staffСard = document.createElement('div');
 
+          //slette
+const deleteBtn = document.createElement("buttton")
+deleteBtn.innerHTML = "Slett ansatt"
+deleteBtn.style.backgroundColor = "red"
+
+
           staffСard.innerHTML = `<img src="${staffMember.image}" style = "width: 100px" /> 
           <h3>${staffMember.name}</h3>`;
           console.log(staffMember.name);
