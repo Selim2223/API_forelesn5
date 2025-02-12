@@ -40,7 +40,7 @@
       //Read for å vise frem alle ansatte
 
       function showAllStaff() {
-        staffContainer.innerHTML = "";
+        staffContainer.innerHTML = '';
         hogwartsStaff.forEach((staffMember, index) => {
           const staffСard = document.createElement('div');
 
@@ -48,24 +48,45 @@
           const deleteBtn = document.createElement('button');
           deleteBtn.innerHTML = 'Slett ansatt';
           deleteBtn.style.backgroundColor = 'red';
-          deleteBtn.addEventListener('click', function(){
-            deleteStaffMember(index)
+          deleteBtn.addEventListener('click', function () {
+            deleteStaffMember(index);
           });
-//  в функции  deleteStaffMember(index) параметр (index) можно представлять как playsholder
+
+          // Edit...........
+
+
+
+
+
+          
+
+          //  в функции  deleteStaffMember(index) параметр (index) можно представлять как playsholder
           staffСard.innerHTML = `<img src="${staffMember.image}" style = "width: 100px" /> 
           <h3>${staffMember.name}</h3>`;
           console.log(staffMember.name);
-          staffСard.append(deleteBtn);
+          staffСard.append(deleteBtn, nameInput, editBtn);
           staffContainer.append(staffСard);
         });
       }
 
+      // функцпя для удаления сотрудника
       function deleteStaffMember(index) {
         hogwartsStaff.splice(index, 1);
         showAllStaff();
-
-        
       }
+
+   
+//craate ..........
+
+
+
+
+
+      addBtn.onclick = addStaffMember;
+
+      // Edit.........
+
+    
 
       // если надо вывести из массива конкретного элемента через его index (CHAT GPT)
 
