@@ -104,7 +104,7 @@ function addStaffMember() {
       // Edit
 
       function editStaffMember(index) {
-        const newStaffName = document.getElementById(nameInput-${index}).value;
+        const newStaffName = document.getElementById(`nameInput-${index}`).value;
         hogwartsStaff[index].name = newStaffName;
         showAllStaff()
       }
