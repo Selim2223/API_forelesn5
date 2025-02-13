@@ -52,7 +52,24 @@
             deleteStaffMember(index);
           });
 
-          // Edit...........
+          // Edit
+
+          const nameInput = document.createElement('Input');
+          nameInput.type = 'text';
+          nameInput.placeholder = 'Skriv inn navn på ansatt...';
+          nameInput.id = nameInput-${index};
+
+          const editBtn = document.createElement('button');
+          editBtn.innerHTML = 'Rediger ansatt';
+          editBtn.addEventListener('click', function () {
+            editStaffMember(index);
+          });
+
+
+
+
+
+          
 
           //  в функции  deleteStaffMember(index) параметр (index) можно представлять как playsholder
           staffСard.innerHTML = `<img src="${staffMember.image}" style = "width: 100px" /> 
@@ -69,9 +86,10 @@
         showAllStaff();
       }
 
-      //Create
+   
+//create 
 
-      function addStaffMember() {
+function addStaffMember() {
         hogwartsStaff.unshift({
           name: newStaffTxt.value,
           image: './image/solnedgang.jpg',
@@ -79,9 +97,15 @@
         showAllStaff();
       }
 
+
+
       addBtn.onclick = addStaffMember;
 
       // Edit.........
+
+
+
+    
 
       // если надо вывести из массива конкретного элемента через его index (CHAT GPT)
 
